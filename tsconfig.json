@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"noUncheckedIndexedAccess": true,
+		"lib": ["es2021"],
+		"module": "commonjs",
+	},
+	"include": ["src/"]
+}

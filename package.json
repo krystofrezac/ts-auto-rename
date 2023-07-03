@@ -1,0 +1,43 @@
+{
+  "name": "@pbk/ts-auto-rename",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "bin": {
+    "ts-auto-rename": "./bin/ts-auto-rename"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "after-install": "yarn build",
+    "build": "rimraf dist && yarn clean && tsc",
+    "check:code": "yarn check:type && yarn check:lint",
+    "check:lint": "scripty",
+    "check:type": "tsc --noEmit",
+    "ci:bump-if-changed": "../../scripts/ci-bump-if-changed.sh",
+    "ci:publish": "yarn publish --verbose",
+    "clean": "rimraf dist",
+    "dev": "scripty",
+    "husky:pre-commit": "lint-staged",
+    "lint": "scripty",
+    "lint:fix": "scripty"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "rimraf": "^5.0.1"
+  },
+  "devDependencies": {
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "scripty": "^2.1.1",
+    "typescript": "^5.1.6"
+  },
+  "config": {
+    "scripty": {
+      "path": "../../scripts"
+    }
+  }
+}
