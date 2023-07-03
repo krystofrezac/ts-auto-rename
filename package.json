@@ -30,6 +30,7 @@
     "rimraf": "^5.0.1"
   },
   "devDependencies": {
+    "@types/node": "^20.3.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "scripty": "^2.1.1",
